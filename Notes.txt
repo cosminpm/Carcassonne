@@ -1,0 +1,38 @@
+-------APUNTES-------
+
+-El carcassone tiene:
+	Estructuras:
+		--> Caminos
+		--> Ciudades
+		--> Monasterios
+		(?) Campos
+
+	Mipples: Tienes un numero limitado de personas, una vez colocada una persona no puedes retirarla hasta completar la estructura.
+
+	- Los caminos se cierran cerrandolos.
+	- Las ciudades terminando su pared.
+	- Los monasterios se cierran rodeando absolutamente sus piezas.
+
+	Puntos:
+		1 Punto por cada loseta de camino
+		2 Puntos por cada loseta de ciudad completa
+		2 puntos por cada escuto en ciudad
+
+	No se puede poner mipple en territorio nuestro o de nuestro enmigo que ya tenga mipple
+
+
+
+
+---------------------
+
+
+
+---------TODO--------
+
+
+
+
+
+
+
+---------------------
