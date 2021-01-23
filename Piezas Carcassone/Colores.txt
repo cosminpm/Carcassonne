@@ -1,2 +1,5 @@
 Verde: 75e879
 Color Monasterios: e36041
+Color Blanco: fffffff
+Color Cruce: fff66c
+Color Castillo: ff9648
