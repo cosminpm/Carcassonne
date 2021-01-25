@@ -23,12 +23,14 @@
 
 
 
----------------------
+---------DONE------------
 
-
+- Poner la gravedad a cero
+- Poner que las piezas no tengan rotacion
 
 ---------TODO--------
 
+- 
 
 
 
@@ -39,3 +41,38 @@
 
 
 https://www.udemy.com/join/login-popup/?error_type=social_auth&data_h=&next=%2Fcourse%2Fmi-primer-juego-con-unity-5%2Flearn%2Fv4%2Foverview&utm_campaign=_._cn_Program-Receipts_._us_AllAll_._tl_T1_._tg_n_._et_2_._eg_4_._la_es_._&utm_content=udemy.5963665&utm_medium=Program-Receipts_FreeCourseEnrollment_AllAll_T1_n&utm_source=email-Pro&utm_term=FREE_COURSE_ENROLLMENT
+
+---------------------
+
+Pautas:
+
+Segundo juego: Puzzle
+• Modelado, materiales y texturas
+◦ Se parte (en Blender) de un plano con una textura de imagen puesta (con UV)
+◦ Se usa la herramienta knife (K) para ir partiendo en piezas más pequeñas
+◦ Se separa cada cara (con P)
+◦ Para cada pieza se le pone el centro en la geometría
+◦ Se pasa el objeto e imagen a Unity
+◦ Se pone un plano (el fondo) del mismo tamaño que nuestro puzzle y un poco más lejos
+de la cámara)
+• Programa de cada pieza
+◦ Acceso al controlador
+◦ Una variable booleana pública llamada bien (inicialmente false)
+◦ Una variable pública de tipo Vector3 llamada inicio
+◦ Una variable de tipo float llamada d que indica la distancia máxima a la que
+consideramos que la ficha está bien colocada
+◦ Se implementa una función drag and drop
+▪️ La pieza solamente pueda cogerse si no estaba bien
+▪️ Al soltar el drag se comprueba si la distancia entre la posición actual de la ficha y
+ladada por inicio es menor que d. Si este es el caso
+• Se pone la ficha en la posición inicio
+• Se declara que ya está bien
+• Se llama al controlador para que compruebe si ya hemos ganado el juego
+• Programa del controlador
+◦ Lista de piezas por tag en Start()
+◦ En Start() accede a cada pieza y almacena en la variable inicio de la ficha su posición
+◦ Tiene otra lista de emptys con la misma longitud que las piezas
+▪️ Indican las posiciones de las piezas al empezar el juego
+▪️ Al empezar el juego asigna a suertes a cada pieza una de estas posiciones y pone la
+pieza en ese lugar
+◦ La función que indica si se gana el juego comprueba que todas las piezas estén bien
