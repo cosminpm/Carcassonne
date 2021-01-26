@@ -11,7 +11,7 @@ public class MoverPiezas : MonoBehaviour
     private float startPosY;
     private bool heRotado = false;
 
-    public float rotZ;
+    private float rotZ = 90;
 
     // Start is called before the first frame update
     void Start()
@@ -27,21 +27,26 @@ public class MoverPiezas : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, this.gameObject.transform.localPosition.z);
-        }
-        if (moving)
             Rotate();
-        
+        }
     }
 
-    // Funcion para rotar las piezas
+    // Funcion para rotar las piezas 
+    // Con la tecla q se gira hacia la izquierda, con la tecla r se gira hacia la derecha
     void Rotate(){
         if (Input.GetKey("r") && !heRotado){
             rotZ += 90;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
             heRotado = true;
         }
-        else if (!Input.GetKey("r")) {
+        if (!Input.GetKey("r") && !Input.GetKey("q")) {
             heRotado = false;
+        }
+
+        if (Input.GetKey("q") && !heRotado){
+            rotZ -= 90;
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            heRotado = true;
         }
     }
 
@@ -54,15 +59,12 @@ public class MoverPiezas : MonoBehaviour
 
             startPosX = mousePos.x - this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;
-           
             moving = true;
-            
         }
 
     }
     // Override
     private void OnMouseUp(){
         moving = false;
-
     }
 }

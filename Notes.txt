@@ -27,10 +27,13 @@
 
 - Poner la gravedad a cero
 - Poner que las piezas no tengan rotacion
+- Las piezas rotan hacia la izquierda y hacia la derecha
+
 
 ---------TODO--------
 
-- 
+- Fixear porque la primera vez que se pulsan no rotan
+- Grid para poner en una casilla 
 
 
 
