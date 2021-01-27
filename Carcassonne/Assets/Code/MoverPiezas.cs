@@ -5,13 +5,13 @@ using UnityEngine;
 public class MoverPiezas : MonoBehaviour
 {
     public GameObject correctForm;
-    private bool moving;
+    private bool moving = false;
 
     private float startPosX;
     private float startPosY;
     private bool heRotado = false;
 
-    private float rotZ = 90;
+    private float rotZ = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,19 +35,21 @@ public class MoverPiezas : MonoBehaviour
     // Con la tecla q se gira hacia la izquierda, con la tecla r se gira hacia la derecha
     void Rotate(){
         if (Input.GetKey("r") && !heRotado){
-            rotZ += 90;
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
-            heRotado = true;
-        }
-        if (!Input.GetKey("r") && !Input.GetKey("q")) {
-            heRotado = false;
-        }
-
-        if (Input.GetKey("q") && !heRotado){
             rotZ -= 90;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
             heRotado = true;
         }
+
+        if (Input.GetKey("q") && !heRotado){
+            rotZ += 90;
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            heRotado = true;
+        }
+
+        if (!Input.GetKey("r") && !Input.GetKey("q")) {
+            heRotado = false;
+        }
+
     }
 
     // Override
