@@ -40,14 +40,18 @@ public class MoverPiezas : MonoBehaviour
             heRotado = true;
         }
 
-        if (Input.GetKey("q") && !heRotado){
+        else if (Input.GetKey("q") && !heRotado){
             rotZ += 90;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
             heRotado = true;
         }
 
-        if (!Input.GetKey("r") && !Input.GetKey("q")) {
+        else if (!Input.GetKey("r") && !Input.GetKey("q")) {
             heRotado = false;
+        }
+
+        if(rotZ%360 == 0){
+            rotZ = 0;
         }
 
     }

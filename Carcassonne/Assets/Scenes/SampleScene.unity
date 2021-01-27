@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctForm: {fileID: 0}
+  rotZ: 0
 --- !u!50 &436360388
 Rigidbody2D:
   serializedVersion: 4
@@ -584,6 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctForm: {fileID: 0}
+  rotZ: 0
 --- !u!50 &1684570816
 Rigidbody2D:
   serializedVersion: 4
