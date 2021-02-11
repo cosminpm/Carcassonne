@@ -35,6 +35,7 @@
 
 
 - Grid para poner en una casilla 
+- Un fondo del proyecto
 
 
 
